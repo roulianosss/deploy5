@@ -1,0 +1,16 @@
+.links--section {
+  width: 100%;
+  padding: var(--spacing-32);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 1280px;
+  margin: 0 auto; }
+  .links--section__container__title {
+    font-family: var(--font-family-heading);
+    font-weight: var(--font-weight-bold);
+    font-size: clamp(var(--font-size-large), 5vw, var(--font-size-1));
+    color: var(--color-neutral-0); }
+
+/*# sourceMappingURL=style.css.map */

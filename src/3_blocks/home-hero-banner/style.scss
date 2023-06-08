@@ -1,0 +1,126 @@
+.home-hero-banner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 100%;
+
+  @media screen and (max-width: 768px) {
+    height: 60vh;
+  }
+
+  @media screen and (max-width: 480px) {
+    height: 50vh;
+  }
+
+  .owl-controls {
+    display: none;
+  }
+
+  &__slides {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1350px;
+  }
+
+  &__slide {
+    display: flex;
+    padding: var(--spacing-64) var(--spacing-96);
+    width: 100%;
+    height: 50vh;
+
+    @media screen and (max-width: 1280px) {
+      padding: var(--spacing-80) var(--spacing-64);
+    }
+
+    @media screen and (max-width: 768px) {
+      padding: var(--spacing-64) var(--spacing-40);
+    }
+
+    @media screen and (max-width: 480px) {
+      padding: var(--spacing-64) var(--spacing-24);
+    }
+  }
+
+  &__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    object-fit: cover;
+    object-position: right top;
+    -webkit-mask-image: -webkit-gradient(linear, left 66%, left bottom, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0)));
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-32);
+
+    @media screen and (max-width: 480px) {
+      justify-content: flex-end;
+    }
+  }
+
+  &__title {
+    @media screen and (max-width: 1024px) {
+      font-size: 3.6vw;
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: clamp(var(--font-size-4), 6vw, var(--font-size-2));
+
+      br {
+        content: " ";
+        display: none;
+      }
+    }
+  }
+
+  &__navigation {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    padding: var(--spacing-32) var(--spacing-96);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-16);
+    width: 100%;
+
+    @media screen and (max-width: 1280px) {
+      padding: var(--spacing-32) var(--spacing-64);
+
+      .tab {
+        &__text {
+          display: none;
+        }
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      flex-wrap: wrap;
+      padding: var(--spacing-32) var(--spacing-40);
+    }
+
+    @media screen and (max-width: 480px) {
+      display: none;
+    }
+  }
+}
+
+.owl-carousel {
+  .owl-item {
+    float: left;
+    position: relative;
+  }
+  .owl-stage-outer {
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,51 @@
+.toggle-button {
+  $self: &;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: 16px;
+  background-color: var(--color-neutral-70);
+  color: var(--color-secondary-20);
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: var(--border-radius-small);
+  transition: var(--motion-duration-short) var(--motion-easing-standard);
+
+  &:hover {
+    background-color: var(--color-neutral-50);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    transform: scale(0.99);
+  }
+
+  &__text {
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-bold);
+    text-decoration: none;
+    text-align: center;
+  }
+
+  &--active {
+    &#{$self}--primary {
+      background-color: var(--color-primary-50);
+      color: var(--color-neutral-100);
+    }
+
+    &#{$self}--secondary {
+      background-color: var(--color-secondary-20);
+      color: var(--color-neutral-100);
+    }
+  }
+
+  &--icon {
+    width: 54px;
+    height: 54px;
+  }
+}

@@ -1,0 +1,149 @@
+<section class="stay-informed-section">
+    <div class="stay-informed-section__container">
+        <h3 class="stay-informed-section__title">Restez-informé</h3>
+        <div class="stay-informed-section__subtitle">
+            <p>
+                Nous décryptons pour vous l’actualité économique et financière et vous donnons des conseils d’investissement pour votre épargne. Abonnez vous à notre newsletter.
+            </p>
+        </div>
+        <div class="stay-informed-section__content">
+
+                <form class="sf-form" action="https://webto.salesforce.com/servlet/servlet.WebToLead" method="POST" novalidate="novalidate" data-once="form-updated" data-drupal-form-fields="salutation,first_name,last_name,email,00N6900000LAsxxTODOajuster1">
+                    <input type="hidden" name="oid" value="00D1r000001mTbk">
+                    <input type="hidden" name="lead_source" value="Site Internet">
+                    <p><input name="retURL" type="hidden" value="https://www.altaprofits.com/documentation/nos-conseils/remerciement-optin"> <input name="00N3O000005Unfj" type="hidden" value="formulaire CONSEIL"></p>
+
+                    <div class="gvnJqy">
+                        <div class="style-groupform form-civilite"><label class="style-label hidden" for="salutation">Civilité</label>
+
+                            <div class="style-form-select"><select class="btnselect no-Sumo" id="salutation" name="salutation"><option disabled="disabled" hidden="" selected="selected" value="">Civilité</option><option value="1">Monsieur</option><option value="2">Madame</option><option value="3">Mademoiselle</option> </select></div>
+                        </div>
+
+                        <div class="style-groupform form-prenom"><label class="style-label hidden" for="first_name">Prénom*</label>
+
+                            <div class="style-form"><input alt="Prénom" autocomplete="Off" class="styleinput" data-msg-required="Ce champ est requis" data-rule-required="true" id="first_name" maxlength="80" name="first_name" placeholder="Prénom*" size="20" style="text-align: left;" title="Prenom" type="text" aria-required="true"></div>
+                        </div>
+
+                        <div class="style-groupform form-nom"><label class="style-label hidden" for="last_name">Nom*</label>
+
+                            <div class="style-form"><input alt="Nom" autocomplete="Off" class="styleinput_form" data-msg-required="Ce champ est requis" data-rule-required="true" id="last_name" maxlength="40" name="last_name" placeholder="Nom*" size="20" style="text-align: left;" title="Nom" type="text" aria-required="true"></div>
+                        </div>
+
+                        <div class="style-groupform form-email"><label class="style-label hidden" for="email">Adresse e-mail *</label>
+
+                            <div class="style-form"><input alt="e-mail" autocomplete="Off" class="styleinput" data-msg-required="Ce champ est requis" data-rule-email="true" data-rule-required="true" id="email" maxlength="80" name="email" placeholder="Adresse e-mail *" required="" size="20" style="text-align: left;" title="e-mail" type="email" aria-required="true"></div>
+                        </div>
+
+                        <div class="style-groupform" style="width: 100%; text-align: left; margin-bottom: 0;">
+                            <div class="label-checkbox"><label for="" style="font-size: 12px; margin-left: 29px;">J’accepte de recevoir par email, de la part d'Altaprofits, des informations et offres commerciales concernant des offres d'épargne.</label></div>
+
+                            <div class="label-checkbox"><input class="checkbox" id="00N6900000LAsxxTODOajuster1" name="00N6900000LAsxxTODOajuster1" style="left: 0px;" type="checkbox" value="1"></div>
+                        </div>
+                        <!--div class="g-recaptcha" data-sitekey="6LdbsqkeAAAAAMRfKREScFqDAYK3PhDojs3V59a3">&nbsp;</div-->
+
+                        <div class="g-recaptcha" data-sitekey="6LdbsqkeAAAAAMRfKREScFqDAYK3PhDojs3V59a3">&nbsp;</div>
+
+                        <div class="input-button">
+                            <input class="button button--center button--primary button--arrow" type="submit" value="Envoyer"/>
+                        </div>
+                        <div class="col-md-12">
+                            <p class="donnee-perso">Pour toute information sur le traitement des données personnelles vous concernant, consultez la section « Vos données personnelles »<br>
+                                accessible à l’adresse suivante: <a href="/information/vos-donnees-personnelles" target="_blank">https://www.altaprofits.com/information/vos-donnees-personnelles</a></p>
+                        </div>
+                    </div>
+                </form>
+                <script type="text/javascript">
+                    function isNumeric(value) {
+                        return /^-?\d+$/.test(value);
+                    }
+
+                    ($(function(){
+                        var convertedPhoneNumber;
+                        $('.sf-form').each(function(){
+                            $(this).validate({
+                                rules: {
+                                    phone: {
+                                        phoneNumberFormatCtrl: {
+                                            paysIso2 : "fr",
+                                            fixeMobile: "fixe_mobile",
+                                            obligatoire: true
+                                        }
+                                    }
+                                },
+                                submitHandler: function(form,event) {
+                                    var phoneNumber = $(form).find('input[name="phone"]');
+                                    var phoneNumberVal = phoneNumber.val();
+
+                                    console.log('not starting with +33',phoneNumberVal.indexOf('+33') == -1);
+                                    console.log('starting with 0',phoneNumberVal.indexOf('0') == 0);
+                                    console.log('length 10',phoneNumberVal.length == 10);
+
+                                    //important check : the number must be valid before conversion
+                                    if(phoneNumberVal.indexOf('+33') == -1 &&
+                                        phoneNumberVal.indexOf('0') == 0 &&
+                                        phoneNumberVal.length == 10){
+                                        convertedPhoneNumber = '+33' + phoneNumberVal.substring(1);
+                                        firstloop = false;
+                                    }
+
+                                    phoneNumber.val(convertedPhoneNumber);
+
+                                    $(form).submit();
+                                }
+
+                            });
+                        })
+                    }));
+                </script>
+
+        </div>
+
+        <form class="sf-form" action="servlet/servlet.WebToLead" method="POST" novalidate="novalidate" data-once="form-updated" data-drupal-form-fields="">
+            <input type="hidden" name="oid" value="">
+            <input type="hidden" name="lead_source" value="Site Internet">
+        </form>
+        <script type="text/javascript">
+            function isNumeric(value) {
+                return /^-?\d+$/.test(value);
+            }
+
+            ($(function () {
+                var convertedPhoneNumber;
+                $('.sf-form').each(function () {
+                    $(this).validate({
+                        rules: {
+                            phone: {
+                                phoneNumberFormatCtrl: {
+                                    paysIso2: "fr",
+                                    fixeMobile: "fixe_mobile",
+                                    obligatoire: true
+                                }
+                            }
+                        },
+                        submitHandler: function (form, event) {
+                            var phoneNumber = $(form).find('input[name="phone"]');
+                            var phoneNumberVal = phoneNumber.val();
+
+                            console.log('not starting with +33', phoneNumberVal.indexOf('+33') == -1);
+                            console.log('starting with 0', phoneNumberVal.indexOf('0') == 0);
+                            console.log('length 10', phoneNumberVal.length == 10);
+
+                            //important check : the number must be valid before conversion
+                            if (phoneNumberVal.indexOf('+33') == -1 &&
+                                phoneNumberVal.indexOf('0') == 0 &&
+                                phoneNumberVal.length == 10) {
+                                convertedPhoneNumber = '+33' + phoneNumberVal.substring(1);
+                                firstloop = false;
+                            }
+
+                            phoneNumber.val(convertedPhoneNumber);
+
+                            $(form).submit();
+                        }
+
+                    });
+                })
+            }));
+        </script>
+    </div>
+</section>

@@ -1,0 +1,84 @@
+.join-the-team-section {
+  background-color: #d1e4f3;
+  padding: var(--spacing-80) 109px;
+  padding: var(--spacing-32);
+  width: 100%;
+  
+  & > h3 {
+    margin-bottom: var(--spacing-80);
+    font-family: var(--font-family-heading);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-1);
+    font-size: clamp(var(--font-size-large), 5vw, var(--font-size-1));
+    text-align: center;
+    color: var(--color-neutral-0);
+  }
+  
+  &__offer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1040px;
+    margin: 0 auto;
+    
+    &__offer-btn {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px var(--color-neutral-0) solid;
+      margin-bottom: var(--spacing-48);
+      cursor: pointer;
+
+      & svg {
+        transition: transform var(--motion-duration-medium) var(--motion-easing-standard);
+      }
+    }
+
+    &__content {
+      font-family: var(--font-family-body);
+      font-size: var(--font-size-medium);
+      color: var(--color-neutral-0);
+      width: 95%;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height var(--motion-duration-medium) var(--motion-easing-standard);
+
+      & h2 {
+        font-size: var(--font-size-4);
+        margin: var(--spacing-24) 0;
+      }
+
+      & li {
+        margin-left: 1.5rem;
+      }
+
+      & strong {
+        display: block;
+        margin-top: var(--spacing-24);
+        margin-bottom: var(--spacing-4);
+      }
+      &__btn {
+        margin: var(--spacing-48) 0;
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+
+    &__btn {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .join-the-team-section__offer-container__offer-btn h3 {
+    font-size: var(--font-size-medium);
+  }
+
+  .join-the-team-section__offer-container__content {
+    font-size: var(--font-size-tiny);
+  }
+}

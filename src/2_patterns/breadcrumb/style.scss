@@ -1,0 +1,17 @@
+.breadcrumb {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--spacing-4);
+  font-size: var(--font-size-tiny);
+
+  a:last-child {
+    font-weight: var(--font-weight-bold);
+
+    background-size: 0% 1.4px;
+
+    &:hover {
+      background-size: 100% 1.4px;
+    }
+  }
+}

@@ -1,0 +1,106 @@
+.squad-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-primary-90);
+
+  & > h3 {
+    margin-top: var(--spacing-40);
+    text-align: center;
+    padding: 0 var(--spacing-8);
+    font-size: clamp(var(--font-size-medium), 5vw, var(--font-size-1));
+  }
+
+  &__cards {
+    margin-top: var(--spacing-48);
+    margin-bottom: var(--spacing-96);
+    display: flex;
+    gap: var(--spacing-8);
+    width: 100%;
+    justify-content: space-around;
+
+    &__card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      & h3 {
+        color: var(--color-primary-50);
+        font-family: var(--font-family-heading);
+        font-weight: var(--font-weight-bold);
+        font-size: clamp(var(--font-size-large), 5vw, var(--font-size-2));
+        text-align: center;
+      }
+
+      & p {
+        font-weight: var(--font-weight-bold);
+      }
+    }
+  }
+
+  &__different-jobs {
+    & h3 {
+      font-family: var(--font-family-heading);
+      font-weight: var(--font-weight-bold);
+      font-size: clamp(var(--font-size-medium), 5vw, var(--font-size-2));
+      text-align: center;
+      color: var(--color-neutral-0);
+    }
+    & h3 {
+      margin-bottom: var(--spacing-40);
+    }
+
+    &__graph {
+      display: flex;
+      justify-content: center;
+      padding: 0 var(--spacing-4);
+      margin-bottom: var(--spacing-96);
+      overflow: hidden;
+
+      & p {
+        font-family: var(--font-family-heading);
+        font-weight: var(--font-weight-bold);
+        font-size: var(--font-size-5);
+        text-align: center;
+        color: var(--color-neutral-0);
+        display: flex;
+        align-items: center;
+        max-width: 170px;
+      }
+
+      &__right-text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        max-width: 170px;
+
+        & p {
+          transform: translateX(-5px);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .squad-container__cards {
+    flex-direction: column;
+  }
+
+  .squad-container__different-jobs__graph img {
+    width: 40%;
+  }
+
+  .squad-container__different-jobs__graph p {
+    max-width: 75px;
+    // font-size: var(--font-size-medium);
+  }
+  .squad-container__different-jobs__graph p {
+    font-size: var(--font-size-tiny);
+  }
+  .squad-container__different-jobs__graph__right-text-container p{
+    max-width: 75px;
+
+  }
+}

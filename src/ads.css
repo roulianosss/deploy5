@@ -1,0 +1,54 @@
+body.ads {
+  background-color: var(--color-neutral-70);
+  overflow-x: hidden;
+  width: 100%; }
+
+header.ads h1 {
+  font-size: 4rem;
+  padding: 1rem;
+  color: var(--color-secondary-20); }
+
+main.ads {
+  padding: var(--spacing-64) var(--spacing-24);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-96); }
+
+section.ads {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-32); }
+  section.ads > h3 {
+    color: var(--color-secondary-50); }
+
+.components.ads,
+.patterns.ads {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-64); }
+
+.section.ads {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-16); }
+  .section.ads > h4 {
+    text-transform: capitalize; }
+
+.sub-section.ads {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: var(--color-neutral-100);
+  padding: var(--spacing-32);
+  gap: var(--spacing-32); }
+
+.blocks.ads .sub-section.ads {
+  padding: 0; }
+
+.screen.ads {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: white; }
+
+/*# sourceMappingURL=ads.css.map */

@@ -1,0 +1,171 @@
+.discover-our-job {
+  width: 100%;
+  padding: var(--spacing-32);
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & > h3 {
+    text-align: center;
+    margin-bottom: var(--spacing-40);
+    font-family: var(--font-family-heading);
+    font-weight: var(--font-weight-bold);
+    font-size: clamp(var(--font-size-large), 5vw, var(--font-size-1));
+    text-align: center;
+    color: var(--color-neutral-0);
+  }
+  &__card-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    max-width: 1440px;
+
+    &__cards {
+      width: 100%;
+      display: flex;
+      overflow: hidden;
+      position: relative;
+
+      &__card {
+        position: relative;
+        min-width: 100%;
+        transition: transform var(--motion-duration-medium) var(--motion-easing-standard);
+        min-height: 500px;
+
+        &__text-container {
+          padding-left: 248px;
+          padding-top: 75px;
+          position: relative;
+          z-index: 1;
+
+          &__title {
+            font-family: var(--font-family-heading);
+            font-weight: var(--font-weight-bold);
+            font-size: var(--font-size-1);
+            color: var(--color-neutral-0);
+            display: flex;
+            align-items: flex-end;
+            margin-bottom: var(--spacing-16);
+
+            & p {
+              margin-left: 47px;
+              font-family: var(--font-family-heading);
+              font-weight: var(--font-weight-bold);
+              font-size: var(--font-size-5);
+              color: var(--color-neutral-0);
+              transform: translateY(-2px);
+            }
+          }
+
+          &__description {
+            font-family: "Expletus Sans";
+            font-weight: var(--font-weight-bold);
+            font-size: 30px;
+            color: var(--color-neutral-0);
+          }
+        }
+
+        &__profile-container {
+          width: 248px;
+          height: auto;
+          position: absolute;
+          clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%, 0 52%);
+          bottom: -290px;
+          left: 0px;
+          overflow: visible;
+        }
+      }
+
+      &__card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        clip-path: polygon(9% 0, 100% 0, 100% 56%, 25% 100%, 0 22%);
+        background: linear-gradient(80.32deg, #fdcec4 6.12%, #e8eeff 62.38%);
+        height: 427px;
+        width: 100%;
+        z-index: 0;
+      }
+    }
+
+    & svg {
+      cursor: pointer;
+      margin: 0 var(--spacing-24);
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .discover-our-job__card-section {
+    max-width: 100%;
+  }
+
+  .discover-our-job__card-section__cards__card {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .discover-our-job__card-section__cards__card::before {
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%, 0 52%);
+    min-height: 500px;
+  }
+
+  .discover-our-job__card-section__cards__card__text-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    padding: var(--spacing-64) var(--spacing-24) 0px;
+
+    & h3 {
+      font-size: var(--font-size-5);
+    }
+
+    & p {
+      margin-left: var(--spacing-16);
+      font-size: var(--font-size-tiny);
+      white-space: nowrap;
+    }
+  }
+
+  .discover-our-job__card-section__cards__card__text-container__description {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .discover-our-job__card-section__cards__card__profile-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-270px);
+
+    & img {
+      max-width: 200px;
+    }
+  }
+
+  .discover-our-job__card-section__right-arrow {
+    position: absolute;
+    right: var(--spacing-12);
+    z-index: 1;
+  }
+  .discover-our-job__card-section__left-arrow {
+    position: absolute;
+    left: var(--spacing-12);
+    z-index: 1;
+  }
+
+  .discover-our-job__card-section__right-arrow svg,
+  .discover-our-job__card-section__left-arrow svg {
+    margin: 0 var(--spacing-4);
+    z-index: 1;
+  }
+}

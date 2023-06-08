@@ -1,0 +1,30 @@
+.icon-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 48px;
+  height: 48px;
+
+  border-radius: var(--border-radius-small);
+
+  transition: background-color var(--motion-duration-short) var(--motion-easing-standard);
+
+  &--light-theme {
+    background-color: var(--color-secondary-20);
+    color: var(--color-neutral-100);
+
+    &:hover {
+      background-color: var(--color-neutral-0);
+    }
+  }
+
+  &--dark-theme {
+    background-color: var(--color-secondary-80);
+    color: var(--color-secondary-20);
+
+    &:hover {
+      background-color: var(--color-secondary-70);
+    }
+  }
+}

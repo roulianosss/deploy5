@@ -1,0 +1,65 @@
+.premium-partner-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-48);
+  padding: var(--spacing-64) var(--spacing-24);
+  width: 100%;
+  /* &__description {
+    display: flex;
+    max-width: 512px;
+    font-size: var(--font-size-medium);
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--spacing-16);
+  }*/ }
+  @media screen and (max-width: 768px) {
+    .premium-partner-section {
+      padding: var(--spacing-48) var(--spacing-16);
+      gap: var(--spacing-16); } }
+  .premium-partner-section__title {
+    text-align: center;
+    max-width: 32ch; }
+    .premium-partner-section__title span {
+      font-family: var(--font-family-heading); }
+  .premium-partner-section__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-32);
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%; }
+    @media screen and (max-width: 768px) {
+      .premium-partner-section__content {
+        flex-direction: column;
+        height: fit-content;
+        gap: var(--spacing-16); } }
+  .premium-partner-section__logos_container {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .premium-partner-section__logos_container img {
+      width: 100%; }
+    .premium-partner-section__logos_container__logo .logo {
+      width: 100%;
+      height: 100%;
+      max-width: 380px; }
+      @media screen and (max-width: 1024px) {
+        .premium-partner-section__logos_container__logo .logo {
+          width: 20vw; } }
+      @media screen and (max-width: 768px) {
+        .premium-partner-section__logos_container__logo .logo {
+          width: 22vw; } }
+      @media screen and (max-width: 480px) {
+        .premium-partner-section__logos_container__logo .logo {
+          width: 30vw; } }
+    .premium-partner-section__logos_container__logo .logo-border {
+      border: 1px solid #688EAC;
+      border-radius: 8px;
+      min-width: 233px;
+      min-height: 110px; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,45 @@
+.paragraphe-section {
+  padding: 0; }
+  .paragraphe-section .ancre {
+    display: block;
+    height: 200px;
+    margin-top: -200px;
+    visibility: hidden;
+    z-index: 1; }
+  .paragraphe-section .theme--light h1,
+  .paragraphe-section .theme--light h2,
+  .paragraphe-section .theme--light h3,
+  .paragraphe-section .theme--light h4,
+  .paragraphe-section .theme--light h5 {
+    color: #002853; }
+  .paragraphe-section h2 {
+    font-family: 'Raleway', raleway;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    color: #002853;
+    padding: 8px 0;
+    margin-top: 6vw; }
+  .paragraphe-section .full-width img {
+    width: 100%; }
+  .paragraphe-section .container {
+    padding: 0 var(--spacing-128); }
+    .paragraphe-section .container img {
+      /* border-radius: 8px;*/ }
+    .paragraphe-section .container p {
+      font-family: 'Open Sans', raleway;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      padding: 8px 0; }
+    .paragraphe-section .container li {
+      list-style: disc;
+      /*color:#002853;*/
+      padding: 8px 0;
+      margin-left: 20px; }
+    .paragraphe-section .container .text-align-center {
+      margin: 0 auto; }
+
+/*# sourceMappingURL=style.css.map */

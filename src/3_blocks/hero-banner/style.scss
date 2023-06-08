@@ -1,0 +1,103 @@
+.hero-banner {
+  $self: &;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--spacing-32) var(--spacing-128) var(--spacing-48);
+  width: 100%;
+  min-height: 24vh;
+
+  @media screen and (max-width: 1280px) {
+    padding: var(--spacing-32) var(--spacing-64) var(--spacing-64);
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: var(--spacing-32) var(--spacing-40) var(--spacing-64);
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: var(--spacing-24) var(--spacing-24) var(--spacing-32);
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-48);
+    padding: var(--spacing-32) 0;
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--spacing-24);
+
+    @media screen and (max-width: 1280px) {
+      gap: var(--spacing-8);
+    }
+
+    @media screen and (max-width: 480px) {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 0;
+    }
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-24);
+  }
+
+  &__catchline {
+    font-weight: var(--font-weight-medium);
+  }
+
+  &__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    object-fit: cover;
+    object-position: right top;
+
+    @media screen and (max-width: 1024px) {
+      object-position: 66% center;
+    }
+  }
+
+  .button, .breadcrumb {
+    position: relative;
+    z-index: 1;
+  }
+
+  &--product {
+    #{$self}__content {
+      padding-top: 0;
+    }
+
+    #{$self}__column {
+      gap: 0;
+
+      @media screen and (max-width: 480px) {
+        gap: var(--spacing-16);
+      }
+    }
+
+    #{$self}__title {
+      color: var(--color-primary-50);
+    }
+
+    #{$self}__logo {
+      padding:0 !important;
+    }
+
+    #{$self}__catchline {
+      font-weight: var(--font-weight-light);
+    }
+  }
+}

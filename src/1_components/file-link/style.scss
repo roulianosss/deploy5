@@ -1,0 +1,15 @@
+.file-link {
+  display: flex;
+  align-items: center;
+  padding: 20px 16px;
+  color: var(--color-secondary-20);
+  background-color: var(--color-secondary-80);
+  text-decoration: underline;
+  border-radius: var(--border-radius-small);
+
+  transition: background-color var(--motion-duration-short) var(--motion-easing-standard);
+
+  &:hover {
+    background-color: var(--color-secondary-70);
+  }
+}

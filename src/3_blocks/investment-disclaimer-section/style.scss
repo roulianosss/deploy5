@@ -1,0 +1,36 @@
+.investment-disclaimer-section {
+  $self: &;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-48);
+  padding: var(--spacing-64) var(--spacing-32);
+  width: 100%;
+  background: var(--gradient-grey-down);
+
+  &__title {
+    text-align: center;
+    max-width: 32ch;
+  }
+
+  &__text > * {
+    max-width: 96ch;
+    font-size: var(--font-size-medium);
+  }
+
+  &--info {
+    #{$self}__title::before {
+      font: var(--fa-font-solid);
+      font-size: var(--font-size-4);
+      margin-right: var(--spacing-16);
+      content: "\f05a";
+    }
+  }
+
+
+  @media screen and (max-width: 480px) {
+    padding: var(--spacing-48) var(--spacing-16);
+    gap: var(--spacing-16);
+  }
+}

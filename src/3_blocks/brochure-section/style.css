@@ -1,0 +1,62 @@
+.since-partner-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-48);
+  padding: var(--spacing-64) var(--spacing-24);
+  width: 100%; }
+  @media screen and (max-width: 768px) {
+    .since-partner-section {
+      padding: var(--spacing-48) var(--spacing-16);
+      gap: var(--spacing-16); } }
+  .since-partner-section__title {
+    text-align: left;
+    max-width: 32ch; }
+    .since-partner-section__title span {
+      font-family: var(--font-family-heading); }
+  .since-partner-section__content {
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-32);
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%; }
+    @media screen and (max-width: 768px) {
+      .since-partner-section__content {
+        flex-direction: column;
+        height: fit-content;
+        gap: var(--spacing-16); } }
+  .since-partner-section__image_container {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    @media screen and (min-width: 1024px) {
+      .since-partner-section__image_container {
+        width: 28%; } }
+    .since-partner-section__image_container img {
+      width: 100%; }
+    .since-partner-section__image_container__image.image {
+      width: 100%;
+      height: 100%;
+      max-width: 380px; }
+      @media screen and (max-width: 1024px) {
+        .since-partner-section__image_container__image.image {
+          width: 20vw; } }
+      @media screen and (max-width: 768px) {
+        .since-partner-section__image_container__image.image {
+          width: 22vw; } }
+      @media screen and (max-width: 480px) {
+        .since-partner-section__image_container__image.image {
+          width: 30vw; } }
+  .since-partner-section__description {
+    display: flex;
+    max-width: 512px;
+    font-size: var(--font-size-medium);
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--spacing-16); }
+
+/*# sourceMappingURL=style.css.map */

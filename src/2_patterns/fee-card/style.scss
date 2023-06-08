@@ -1,0 +1,67 @@
+.fee-card {
+  $self: &;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: var(--spacing-24);
+  gap: var(--spacing-4);
+  text-align: center;
+  background-color: var(--color-primary-80);
+  border-radius: var(--border-radius-small);
+
+  &__value {
+    display: flex;
+  }
+
+  &__number {
+    font-size: var(--font-size-3);
+    font-weight: var(--font-weight-bold);
+    font-family: var(--font-family-heading);
+    font-feature-settings: 'pnum' on, 'lnum' on, 'liga' off;
+  }
+
+  &__unit {
+    font-size: var(--font-size-tiny);
+    font-weight: var(--font-weight-bold);
+    font-family: var(--font-family-heading);
+    padding-top: 2%;
+  }
+
+  &__list {
+    font-size: var(--font-size-tiny);
+    width: 240px;
+  }
+
+  &--highlight {
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--spacing-24);
+    padding: 0;
+    background: none;
+
+    @media screen and (max-width: 480px) {
+      flex-direction: column;
+      gap: var(--spacing-8);
+    }
+
+    #{$self}__value {
+      color: var(--color-primary-50);
+    }
+
+    #{$self}__number {
+      font-size: var(--font-size-number-1);
+      line-height: 80%;
+    }
+
+    #{$self}__unit {
+      font-size: var(--font-size-4);
+      padding-top: 10%;
+    }
+
+    #{$self}__list {
+      text-align: left;
+      font-size: var(--font-size-small);
+    }
+  }
+}

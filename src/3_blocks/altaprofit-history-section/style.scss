@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap");
+
+.history-section {
+  width: 100%;
+  padding: var(--spacing-32);
+  user-select: none;
+  & > h3 {
+    text-align: center;
+    margin-bottom: var(--spacing-40);
+  }
+  &__cards-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    &__cards {
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      z-index: 0;
+
+      &__card {
+        padding: 0 var(--spacing-12);
+        min-width: 25%;
+        user-select: none;
+        transition: transform 0.2s cubic-bezier(.4, .2, .4, .8);
+        will-change: transform;
+        overflow: hidden;
+
+        &:hover &__header {
+          background-color: var(--color-primary-50);
+          color: var(--color-neutral-100);
+        }
+
+        &:hover &__header h3 {
+          color: var(--color-neutral-100);
+        }
+        
+        &__header {
+          border-radius: var(--border-radius-small) var(--border-radius-small) 0 0;
+          background: var(--color-primary-80);
+          position: relative;
+          display: flex;
+          align-items: center;
+          transition: background-color var(--motion-duration-medium) var(--motion-easing-standard);
+          
+          & h3 {
+            font-family: "Gravitas One";
+            font-size: var(--font-size-4);
+            text-align: center;
+            color: var(--color-neutral-0);
+            padding: var(--spacing-24) var(--spacing-16);
+          }
+          
+        }
+        
+        &__body {
+          height: 200px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: var(--spacing-24) var(--spacing-16);
+          gap: var(--spacing-16);
+          background-color: var(--color-primary-90);
+          text-align: center;
+          font-family: var(--font-family-body);
+          font-size: var(--font-size-tiny);
+          color: var(--color-neutral-0);
+          border-radius: 0  0 var(--border-radius-small) var(--border-radius-small);
+        }
+      }
+    }
+
+    & svg {
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .history-section__cards-section__cards__card {
+    min-width: 100%;
+  }
+}

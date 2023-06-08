@@ -1,0 +1,61 @@
+.lexique-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-48);
+  padding: var(--spacing-12);
+  margin-bottom: var(--spacing-12);
+  width: 100%;
+  flex-grow: 1; }
+  .lexique-section ul {
+    margin: 0 -5px;
+    padding: 0; }
+    .lexique-section ul.letters a, .lexique-section ul.letters span {
+      font-family: 'Raleway';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 33px;
+      /*40*/
+      line-height: 47px;
+      letter-spacing: 0.11em;
+      font-feature-settings: 'pnum' on, 'lnum' on, 'liga' off;
+      color: #FF4D29; }
+    .lexique-section ul.letters span {
+      color: #002853; }
+    .lexique-section ul li {
+      list-style: none;
+      margin: 5px 3px;
+      display: inline-block; }
+      .lexique-section ul li .current a {
+        background-color: #c9e6f0;
+        border-color: #abd8e8;
+        filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+        opacity: 1; }
+
+#lexique {
+  clear: both; }
+  #lexique .letter {
+    float: left; }
+    @media screen and (min-width: 750px) {
+      #lexique .letter {
+        width: 33%; } }
+  #lexique h2 {
+    color: #FF4D29;
+    margin-top: 0; }
+  #lexique ul {
+    margin-top: 20px; }
+  #lexique li {
+    list-style-type: none; }
+  #lexique .clear {
+    clear: both;
+    padding-top: 84px; }
+  #lexique a {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    font-feature-settings: 'pnum' on, 'lnum' on, 'liga' off;
+    color: #001329; }
+
+/*# sourceMappingURL=style.css.map */

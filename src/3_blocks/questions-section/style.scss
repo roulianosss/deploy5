@@ -1,0 +1,103 @@
+.questions-container {
+  width: 100%;
+  padding: var(--spacing-32);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 1280px;
+  margin: 0 auto;
+  
+  & > h3 {
+    margin-top: 73px;
+    margin-bottom: 51px;
+    font-family: var(--font-family-heading);
+    font-weight: var(--font-weight-bold);
+    font-size: clamp(var(--font-size-large), 5vw, var(--font-size-1));
+    color: var(--color-neutral-0);
+  }
+}
+
+.accordion-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__accordion-btn {
+    width: 100%;
+    height: 71px;
+    padding: var(--spacing-24);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f7fafd;
+    border-radius: var(--border-radius-small);
+    cursor: pointer;
+    margin-top: var(--spacing-24);
+    transition: background-color var(--motion-duration-medium);
+    user-select: none;
+
+    & svg {
+      transition: transform 0.4s var(--motion-easing-standard);
+    }
+  }
+
+  &__content {
+    color: #192542;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s var(--motion-easing-standard);
+    margin-top: var(--spacing-32);
+    
+    &__question-container {
+      width: 95%;
+      display: flex;
+      flex-direction: column;
+      
+      &__question {
+        user-select: none;
+        display: flex;
+        justify-content: space-between;
+        // padding-bottom: var(--spacing-12);
+        border-bottom: 2px solid #6b6b6b;
+        cursor: pointer;
+
+        & h3 {
+          transform: translateY(-5px);
+          font-size: var(--font-size-2);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0 var(--spacing-4);
+        }
+      }
+
+      &__response {
+        margin: 0 0 0 0;
+        margin: var(--spacing-16) 0 var(--spacing-40);
+        font-size: var(--font-size-medium);
+        padding: 0 var(--spacing-12) ;
+        max-height: 0px;
+        overflow: hidden;
+        transition: max-height 0.5s var(--motion-easing-standard), opacity 0.5s var(--motion-easing-standard);
+        font-family: var(--font-family-body);
+        opacity: 0;
+        & ul{
+          margin-left: 18px;
+        }
+        & li {
+          font-family: var(--font-family-body);
+          font-size: var(--font-size-medium);
+          padding-left: 0;
+        }
+
+        a {
+          color: #0666ac;
+        }
+      }
+    }
+  }
+}

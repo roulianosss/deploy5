@@ -1,0 +1,98 @@
+.lexique-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-48);
+  padding: var(--spacing-12);
+  margin-bottom: var(--spacing-12);
+  width: 100%;
+  flex-grow: 1;
+
+  ul {
+    margin: 0 -5px;
+    padding: 0;
+
+    &.letters a, &.letters span {
+      font-family: 'Raleway';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 33px; /*40*/
+      line-height: 47px;
+      letter-spacing: 0.11em;
+      font-feature-settings: 'pnum' on, 'lnum' on, 'liga' off;
+      color: #FF4D29;
+    }
+
+    &.letters span {
+      color: #002853;
+    }
+
+    li {
+      list-style: none;
+      margin: 5px 3px;
+
+      .current a {
+        background-color: #c9e6f0;
+        border-color: #abd8e8;
+        filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+        opacity: 1;
+      }
+    }
+  }
+  .letters{
+    li{
+
+      display: inline-block;
+    }
+  }
+  #lexique {
+    clear: both;
+    width: 80%;
+    max-width: 1200px;
+    .letter {
+      li{
+        display:block;
+        width: 100%;
+      }
+      @media screen and (min-width: 1024px) {
+        width: 33%;
+        float: left;
+        li {
+
+          display: block;
+        }
+      }
+    }
+
+    h2 {
+      color: #FF4D29;
+      margin-top: 30px;
+    }
+
+    ul {
+      margin-top: 8px;
+    }
+
+    li {
+      list-style-type: none;
+    }
+
+    .clear {
+      clear: both;
+      @media screen and (min-width: 1024px) {
+        padding-top: 32px;
+      }
+    }
+
+    a {
+      font-family: 'Raleway';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28px;
+      font-feature-settings: 'pnum' on, 'lnum' on, 'liga' off;
+      color: #001329;
+    }
+  }
+
+}

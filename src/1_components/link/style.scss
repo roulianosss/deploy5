@@ -1,0 +1,30 @@
+.link {
+  color: var(--color-secondary-20);
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 1px;
+  transition: background-size var(--motion-duration-short) var(--motion-easing-standard);
+  width: fit-content;
+
+  &:hover {
+    background-size: 100% 1px;
+  }
+
+  &--arrow {
+    position: relative;
+    width: fit-content;
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: -10px;
+      transform: translateY(-50%);
+      font: var(--fa-font-solid);
+      font-size: 8px;
+      content: "\f054";
+    }
+  }
+
+}

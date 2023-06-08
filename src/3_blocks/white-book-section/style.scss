@@ -1,0 +1,131 @@
+.white-book-section {
+  row-gap: 0;
+  z-index: 2;
+  /*margin: 80px 30vw;
+  width: 100%;*/
+  margin: 80px auto;
+  max-width: 615px;
+  width: 33%;
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-24);
+  padding: var(--spacing-24) 38px;
+  background-color: var(--color-secondary-70);
+  position: relative;
+
+  @media screen and (max-width: 768px) {
+    padding: var(--spacing-48) var(--spacing-16);
+    gap: var(--spacing-16);
+  }
+  @media screen and (min-width: 768px) {
+    min-width: 768px;
+  }
+
+  &__title {
+    text-align: left;
+    width: 100%;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+
+    span {
+      font-family: var(--font-family-heading);
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-24);
+
+    &__image.image {
+      width: 100%;
+      height: 100%;
+      max-width: 175px;
+
+      @media screen and (max-width: 1024px) {
+        width: 20vw;
+      }
+
+      @media screen and (max-width: 768px) {
+        width: 22vw;
+      }
+
+      @media screen and (max-width: 480px) {
+        width: 30vw;
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: row;
+      gap: var(--spacing-16);
+      align-items: center;
+      align-content: center;
+      justify-content: start;
+      flex-wrap: wrap;
+      width: 100%;
+
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+        height: fit-content;
+        gap: var(--spacing-16);
+      }
+
+      &__title {
+
+        font-weight: 700;
+        font-size: 22px;
+      }
+    }
+
+  }
+
+  .owl-carousel {
+    display: none;
+    width: 100%;
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+    z-index: 1;
+
+    &.owl-loaded {
+      display: block;
+    }
+  }
+
+  .owl-controls {
+    .ol-nav {
+      position: relative;
+    }
+
+    width: 100%;
+    position: absolute;
+    top: 34%;
+
+    .owl-prev,
+    .owl-next {
+      position: absolute;
+      top: 45%;
+    }
+
+    .owl-prev {
+      transform: translateX(-25px);
+    }
+
+    .owl-next {
+      right: -25px;
+    }
+  }
+
+  &__description {
+    max-width: 512px;
+    font-size: var(--font-size-medium);
+  }
+}

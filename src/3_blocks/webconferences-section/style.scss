@@ -1,0 +1,38 @@
+.webconferences-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-32);
+  padding: var(--spacing-64) var(--spacing-24);
+  width: 100%;
+
+  @media screen and (max-width: 480px) {
+    padding: var(--spacing-48) var(--spacing-16);
+  }
+
+  &__content {
+    display: flex;
+    gap: var(--spacing-32);
+    width: 100%;
+    max-width: 1280px;
+    padding: var(--spacing-16) 0 var(--spacing-32);
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    width: fit-content !important;
+    gap: var(--spacing-24);
+    padding: var(--spacing-16);
+  }
+
+  .article-card {
+    align-self: center;
+  }
+
+  .button {
+    align-self: flex-end;
+  }
+
+}

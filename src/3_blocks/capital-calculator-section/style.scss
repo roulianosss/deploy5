@@ -1,0 +1,197 @@
+.capital-calculator-section {
+  background-color: var(--color-primary-90);
+  width:100%;
+
+  &__title {
+    font-family: var(--font-family-heading);
+    font-weight: 700;
+    font-size: var(--font-size-2);
+    color: var(--color-neutral-0);
+    text-align: center;
+    width:100%;
+    h2{
+      display:inline-block;
+      max-width: 22ch;
+      margin: 60px auto;
+    }
+  }
+
+  &__cursors-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: var(--spacing-24);
+    gap: var(--spacing-48);
+    width: 80%;
+    max-width: 767px;
+    margin: 0 auto;
+
+    &__cursor-container {
+      max-width: calc((100% - 48px) / 2);
+      min-width: calc((100% - 48px) / 2);
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+
+      & p {
+        font-family: "Open Sans";
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        // text-align: center;
+        color: var(--color-neutral-0);
+        margin-bottom: 1rem;
+      }
+
+      & label {
+        font-family: var(--font-family-heading);
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 38px;
+        // text-align: center;
+        letter-spacing: -0.02em;
+        color: #001329;
+        margin-bottom: 0.5rem;
+      }
+
+      & input {
+        border-radius: 8px;
+        height: 7px;
+        width: 100%;
+        outline: none;
+        -webkit-appearance: none;
+      }
+
+      & input[id="first-range"] {
+        background: linear-gradient(
+          to right,
+          #ff6442 0%,
+          #ff6442 40%,
+          #fbe1da 40%,
+          #fbe1da 100%
+        );
+      }
+
+      & input[id="second-range"] {
+        background: linear-gradient(
+          to right,
+          #ff6442 0%,
+          #ff6442 20%,
+          #fbe1da 20%,
+          #fbe1da 100%
+        );
+      }
+
+      & input[id="third-range"] {
+        background: linear-gradient(
+          to right,
+          #ff6442 0%,
+          #ff6442 16%,
+          #fbe1da 16%,
+          #fbe1da 100%
+        );
+      }
+
+      & input[id="fourth-range"] {
+        background: linear-gradient(
+          to right,
+          #ff6442 0%,
+          #ff6442 40%,
+          #fbe1da 40%,
+          #fbe1da 100%
+        );
+      }
+
+      & input::-webkit-slider-thumb {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        -webkit-appearance: none;
+        cursor: ew-resize;
+        background: #ff6442;
+      }
+      & input::-moz-range-thumb {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: none;
+        -webkit-appearance: none;
+        cursor: ew-resize;
+        background: #ff6442;
+      }
+    }
+  }
+
+  &__result-value {
+    font-family: var(--font-family-heading);
+    font-weight: 800;
+    font-size: 96px;
+    line-height: 113px;
+    margin-top: 40px;
+    margin-bottom: 35px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #ff6442;
+    white-space: nowrap;
+    width:100%;
+    text-align:center;
+  }
+
+  &__btns-container {
+    min-width: 100%;
+    display: flex;
+    margin: 0 auto;
+    gap: 2rem;
+    justify-content: center;
+    padding-bottom: 60px;
+  }
+}
+
+@media screen and (max-width: 724px) {
+  .capital-calculator-section {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__title {
+      font-size: 24px;
+    }
+    &__cursors-container {
+      flex-direction: column;
+      width: fit-content;
+      margin: 0 auto;
+      padding: 0;
+      gap: 0.5rem;
+
+      &__cursor-container {
+        min-width: 100%;
+
+        & p {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &__result-value {
+      font-family: var(--font-family-heading);
+      font-style: normal;
+      font-weight: 800;
+      font-size: clamp(55px, 10vw, 64px);
+      line-height: 75px;
+      text-align: center;
+      letter-spacing: -0.02em;
+
+      /* Primary/50 */
+
+      color: #ff6442;
+    }
+    &__btns-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 37px;
+    }
+  }
+}

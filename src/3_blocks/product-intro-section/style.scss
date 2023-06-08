@@ -1,0 +1,118 @@
+.product-intro-section {
+  width: 100%;
+  padding: var(--spacing-32) var(--spacing-128) var(--spacing-48);
+  /*@media screen and (max-width: 1280px) {
+    padding: var(--spacing-32) var(--spacing-64) var(--spacing-64)
+  }
+  @media screen and (max-width: 768px) {
+    padding: var(--spacing-32) var(--spacing-40) var(--spacing-64)
+  }
+  @media screen and (max-width: 480px) {
+    padding: var(--spacing-24) var(--spacing-24) var(--spacing-32)
+  }*/
+  &
+  > div > div:first-of-type {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    column-gap: 40px;
+    gap: var(--spacing-16);
+  }
+
+  .img {
+    float: left;
+    width: 352px;
+    height: 224px;
+    margin-right: 35px;
+  }
+  &__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-16);
+  }
+  &__content {
+    clear: both;
+    display: flex;
+    gap: var(--spacing-48);
+
+    &__date {
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      color: #002853;
+    }
+
+    &__title .title{
+      font-family: 'Expletus Sans';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 43px;
+      font-feature-settings: 'pnum' on, 'lnum' on, 'liga' off;
+      color: #002853;
+      text-align:left;
+    }
+  }
+
+  &__texte p {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+    padding:0;
+  }
+
+  &__sommaire {
+    background: #F3F5F6;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 32px 70px;
+    width:100%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    .title {
+      font-family: 'Open Sans', sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 27px;
+      color: #FF4D29;
+    }
+    ul {
+      list-style-type:none;
+    }
+    a {
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 22px;
+      color: #002853;
+    }
+
+  }
+
+  &__texte_fl p {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+    padding: 0;
+  }
+  &__lien {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}

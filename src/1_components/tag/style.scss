@@ -1,0 +1,20 @@
+.tag {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px 8px 12px;
+  width: fit-content;
+  height: fit-content;
+  color: var(--color-neutral-0);
+  background-color: var(--color-secondary-70);
+  border-radius: 4px 24px 24px 4px;
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-semibold);
+}
+.tag:hover{
+  background-color: var(--color-secondary-50);
+  color: var(--color-secondary-80);
+}
+.tag.active{
+  background-color: var(--color-secondary-20);
+  color: var(--color-secondary-80);
+}
